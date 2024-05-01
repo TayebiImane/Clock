@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/Clock.ico" type="image/x-icon">
+    <title>Clock</title>
+</head>
+<body>
+    <div id="top">JS</div>
+    <div class="clock_face">
+        <p id="twelve" class="clock_number">12</p>
+        <p id="one" class="clock_number">1</p>
+        <p id="two" class="clock_number">2</p>
+        <p id="three" class="clock_number">3</p>
+        <p id="four" class="clock_number">4</p>
+        <p id="five" class="clock_number">5</p>
+        <p id="six" class="clock_number">6</p>
+        <p id="seven" class="clock_number">7</p>
+        <p id="eight" class="clock_number">8</p>
+        <p id="nine" class="clock_number">9</p>
+        <p id="ten" class="clock_number">10</p>
+        <p id="eleven" class="clock_number">11</p>
+        <div class="hand_hour"></div>
+        <div class="hand_min"></div>
+        <div class="hand_second"></div>
+    </div>
+    <script>
+        var secondHand = document.getElementsByClassName("hand_second")[0];
+        var minHand=document.getElementsByClassName("hand_min")[0];
+        var hourHand=document.getElementsByClassName("hand_hour")[0];
+        var rotations = -90;
+        var rotationm=-84;
+        var rotationh=-84;
+
+    function translate_hand_second() {
+        secondHand.style.transform = `rotate(${rotations}deg)`;
+        if(rotations+90!=0){
+            if(((rotations+90)%360)==0 ){
+                minHand.style.transform=`rotate(${rotationm}deg)`;
+                rotationm+= (360/60);
+        }
+            if((rotations+90)%3600==0){
+                hourHand.style.transform=`rotate(${rotationh}deg)`;
+                rotationh+=(360/60);
+            }
+        }
+        rotations += (360 / 60);
+    }
+    setInterval(translate_hand_second, 1000);
+    </script>
+</body>
+</html>

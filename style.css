@@ -1,0 +1,135 @@
+body {
+    background: linear-gradient(to left, blueviolet, violet);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.clock_face{
+    position: absolute;
+    left: 38%;
+    bottom: 30%;
+    border: Solid 8px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-color: aliceblue;
+    background-color: rgb(169, 54, 163);
+}
+.hand_hour, .hand_min ,.hand_second{
+    border: solid;
+    width: 130px;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform-origin: 0%;
+    transform: rotate(-90deg);
+    
+
+}
+
+.hand_second{
+    color: rgb(100, 25, 25);
+   
+}
+.hand_hour{
+    width: 110px;
+}
+.clock_number{
+    position: relative;
+    left: 50%;
+}
+#one{
+    position: relative;
+    left:75%;
+    top: 2%;
+    padding: 0px;
+    margin: 0px;
+}
+#two{
+    position: relative;
+    left: 90%;
+    top: 10%;
+    padding: 0px;
+    margin: 0px;
+    
+}
+#three{
+    position: relative;
+    left: 95%;
+    top: 27%;
+   padding: 0px;
+    margin: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+#four{
+    position: relative;
+    left: 90%;
+    top: 42%;
+    padding: 0px;
+    margin: 0px;
+   
+}
+#five{
+    position: relative;
+    left:74% ;
+    top: 55%;
+    padding: 0px;
+    margin: 0px;
+}
+#six{
+    position: relative;
+    top: 58%;
+    padding: 0px;
+    margin: 0px;
+}
+#seven{
+    position: absolute;
+    bottom: 6%;
+    left: 25%;
+    padding: 0px;
+    margin: 0px;
+   
+}
+#eight{
+    position: relative;
+    top: 24%;
+    left:6%;
+    padding: 0px;
+    margin: 0px;
+}
+#nine{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    left: 2%;
+}
+#ten{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    bottom: 30%;
+    left: 6%;
+}
+#eleven{
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    bottom: 56%;
+    left: 24%;
+}
+#twelve{
+    padding: 0px;
+    margin: 0px;
+}
+#top{
+    position: flex;
+    padding:30px;
+    margin: 0px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(105, 50, 156);
+    font-size: 30px; 
+    border-radius: 20px 0px;
+    box-shadow: 0px 5px 4px 0px black;
+}
